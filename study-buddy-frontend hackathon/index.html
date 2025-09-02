@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>📚 Study Buddy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📚 Study Buddy</h1>
+    <p class="subtitle">Paste notes → Generate flashcards → Flip & review (saved to MySQL)</p>
+  </header>
+
+  <main>
+    <!-- Notes input -->
+    <section id="input">
+      <textarea id="notesInput" placeholder="Paste your study notes here..."></textarea>
+      <div class="controls">
+        <button id="generateBtn">AI Generate & Save</button>
+        <button id="loadBtn">Load Saved Flashcards</button>
+        <button id="clearBtn">Clear Saved Cards</button>
+      </div>
+      <div id="status"></div>
+    </section>
+
+    <!-- Flashcards -->
+    <section id="cards-area">
+      <div id="flashcardsContainer"></div>
+      <div class="navigation">
+        <button id="prev">⬅ Prev</button>
+        <span id="progress">0 / 0</span>
+        <button id="next">Next ➡</button>
+      </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment">
+      <h2>💳 Upgrade to Premium</h2>
+      <p>Unlock unlimited flashcards & AI features.</p>
+      <button id="payBtn">Pay with IntaSend</button>
+    </section>
+  </main>
+
+  <footer>
+    <small>Double-click a card to reset its flip. <br> Backend: Flask + MySQL + Hugging Face + IntaSend</small>
+  </footer>
+
+  <!-- axios for API requests -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- IntaSend SDK -->
+  <script src="https://unpkg.com/intasend-inlinejs-sdk@3/dist/intasend-inline.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
